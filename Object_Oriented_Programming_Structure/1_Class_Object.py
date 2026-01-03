@@ -2,6 +2,26 @@ print("Object Oriented Programming_Structure/ System (OOP's)")
 """
 A real world object convert into software world is called OOP
 
+use of oop's
+easy to store data in organized way
+easy to access the data
+for re-usability purpose
+for maintainability purpose
+
+Clss: it is act plan / blue print / model / design of the object.
+object: it is instance of class
+        0bject is real world entity which have it's won attributes and property.
+        object is pointing to class.
+        
+There are three member of inside the class
+1. Methods
+2. Constructor
+3. Variables
+
+There are Three types of variables
+1. class variable / static variable
+2. local variable
+3. instance variable
 """
 # inside class data print outside directly it will show NameError
 class Employee:
