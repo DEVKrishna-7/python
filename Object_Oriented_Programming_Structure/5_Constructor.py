@@ -41,3 +41,12 @@ class Students:
 s=Students()
 s.sem_1st()
 s.sem_3rd()
+
+# constructor with argument
+class Details:
+    def __init__(self,name,balance,add):
+        acc_name=name
+        acc_bal=balance
+        acc_add=add
+        print(f"my account name is {acc_name}\naccount balance is {acc_bal}\naccount address is {acc_add}")
+d=Details("virat","18000000","London")

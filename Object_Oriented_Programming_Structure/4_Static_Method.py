@@ -4,7 +4,7 @@ Any method it will present inside the class and decorated with @staticmethod
 the static method take self and cls parameter
 it's also know as independent method
 we can not done any modification by object and class name but we can do manually
-it use for maintain code structure
+it use for code utility purpose
 """
 class Math:
     @staticmethod
@@ -47,3 +47,19 @@ Calculator.mul(10,5)
 Calculator.div(10,5)
 """ if we try any modification by calss and object it's not effect on static method
 because it not associated with class and object."""
+
+# try
+class Calcy:
+    @staticmethod
+    def add():
+        a=10
+        b=20
+        return a+b
+    @staticmethod
+    def sub():
+        a = 10
+        b = 20
+        return a-b
+obj=Calcy()
+print(obj.add())
+print(Calcy.sub())
