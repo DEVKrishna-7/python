@@ -38,3 +38,40 @@ class Manager(Employee):
 
 m=Manager("riya",9000000,5)
 m.details()
+
+# Real world example
+# Parent Class: Basic features for all bank accounts
+class BankAccount:
+    def __init__(self, owner, balance):
+        self.owner = owner
+        self.balance = balance
+
+    def display_balance(self):
+        print(f"Owner: {self.owner} | Balance: ${self.balance}")
+
+
+# Child Class: Adding specialized "Savings" features
+class SavingsAccount(BankAccount):
+    # This class automatically gets owner and balance from BankAccount
+
+    def add_interest(self, rate):
+        """Calculates interest and updates the balance."""
+        interest = (self.balance * rate) / 100
+        self.balance += interest  # Updates the balance inherited from parent
+        print(f"Interest Added: +${interest}")
+
+
+# --- Testing the Code ---
+
+# 1. Create a SavingsAccount for "John" with $1000
+# Note: It uses the Parent's __init__ because we didn't write a new one
+john_savings = SavingsAccount("John", 1000.0)
+
+# 2. Call inherited method
+john_savings.display_balance()  # Output: Owner: John | Balance: $1000.0
+
+# 3. Call child-specific method (5% interest)
+john_savings.add_interest(5)  # Output: Interest Added: +$50.0
+
+# 4. Final balance check
+john_savings.display_balance()  # Output: Owner: John | Balance: $1050.0
